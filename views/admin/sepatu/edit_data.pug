@@ -1,0 +1,63 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Sepatu
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Sepatu Kita
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="POST", action='/'+sepatus._id + '/editsepatu')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodesepatu') Kode Sepatu
+                                        .col-sm-10
+                                            input#kodesepatu.form-control(type='text' name="kodesepatu" placeholder='Kode Sepatu' value= (kodesepatu == undefined) ? sepatus.kodesepatu: kodesepatu)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='merksepatu') Merk Sepatu
+                                        .col-sm-10
+                                            input#merksepatu.form-control(type='text' name="merksepatu" placeholder='Merk Sepatu' value= (merksepatu == undefined) ? sepatus.merksepatu: merksepatu)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='modelsepatu') Model Sepatu
+                                        .col-sm-10
+                                            input#modelsepatu.form-control(type='text' name="modelsepatu" placeholder='Model Sepatu' value= (modelsepatu == undefined) ? sepatus.modelsepatu: modelsepatu)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='ukuransepatu') Ukuran Sepatu
+                                        .col-sm-10
+                                            input#ukuransepatu.form-control(type='text' name="ukuransepatu" placeholder='Ukuran Sepatu' value= (ukuransepatu == undefined) ? sepatus.ukuransepatu: ukuransepatu)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='stok') Stok
+                                        .col-sm-10
+                                            input#stok.form-control(type='text' name="stok" placeholder='Stok' value= (stok == undefined) ? sepatus.stok: stok)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='harga') Harga
+                                        .col-sm-10
+                                            input#harga.form-control(type='text' name="harga" placeholder='Harga' value= (harga == undefined) ? sepatus.harga: harga)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='diskon') Diskon
+                                        .col-sm-10
+                                            input#diskon.form-control(type='text' name="diskon" placeholder='Diskon' value= (diskon == undefined) ? sepatus.diskon: diskon)
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer

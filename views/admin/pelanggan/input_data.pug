@@ -1,0 +1,56 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Pelanggan
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Pelanggan
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputpelanggan", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodepelanggan') Kode Pelanggan
+                                        .col-sm-10
+                                            input#kodepelanggan.form-control(type='text' name="kodepelanggan" placeholder='Kode Pelanggan')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='namapelanggan') Nama Pelanggan
+                                        .col-sm-10
+                                            input#namapelanggan.form-control(type='text' name="namapelanggan" placeholder='Nama Pelanggan')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='alamat') Alamat
+                                        .col-sm-10
+                                            input#alamat.form-control(type='text' name="alamat" placeholder='Alamat')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='telepon') Telepon
+                                        .col-sm-10
+                                            input#telepon.form-control(type='text' name="telepon" placeholder='Telepon')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='email') Email
+                                        .col-sm-10
+                                            input#email.form-control(type='text' name="email" placeholder='Email')
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
